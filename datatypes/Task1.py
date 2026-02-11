@@ -2,16 +2,16 @@
 # and display back on terminal again.
 
 # Convert the input string into an 'int' so we can do math
-d=int(input("Enter decimal numbers:"))
+decimalnumb=int(input("Enter decimal numbers:"))
 
 # Using Binary func
-x=bin(d)
-print(f"Decimal {d} in Binary is {x}")
+binarynumb=bin(decimalnumb)
+print(f"Decimal {decimalnumb} in Binary is {binarynumb}")
 
 # Using Octal func
-x=oct(d)
-print(f"Decimal {d} in Octal is {x}")
+octalnumb=oct(decimalnumb)
+print(f"Decimal {decimalnumb} in Octal is {octalnumb}")
 
 # Using Hexadecimal func
-x=hex(d)
-print(f"Decimal {d} in Hexadecimal is {x}")
+hexanumb=hex(decimalnumb)
+print(f"Decimal {decimalnumb} in Hexadecimal is {hexanumb}")
