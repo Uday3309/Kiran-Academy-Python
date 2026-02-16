@@ -1,78 +1,40 @@
+| **Positive Index** | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Character | k | i | r | a | n | | a | c | a | d | e | m | y |
+| **Negative Index** | -13 | -12 | -11 | -10 | -9 | -8 | -7 | -6 | -5 | -4 | -3 | -2 | -1 |
 
-# WAP to take input string and perform below scenarios
-Python Slicing Challenge: "kiran academy"
-Objective: Master the art of string slicing using the variable name = "kiran academy". Complete the following 30 scenarios to test your understanding of indices and steps.
 
-1. Positive Start + Positive Stop
-Extract substrings using only forward-counting indices (0 to 9).
+## Slicing Scenarios
+1. Positive Step Size (Forward)
+Explores how increasing the step size "skips" characters while moving from left to right.
 
-Example: name[0:5] → "hello"
+- Key Logic: name[start:stop:positive_step]
 
-name[0:6]
+- Examples: name[0::1], name[1::2], name[2::3]
 
-name[3:8]
+2. Negative Step Size (Backward)
+Navigate the string in reverse. Note how the start must be "after" the stop for results to appear.
 
-name[5:10]
+- Key Logic: name[start:stop:negative_step]
 
-name[2:4]
+- Examples: name[-4:-12:-1], name[-1:-8:-2]
 
-name[0:9]
+3. Start Negative, End Positive
+Using a negative index to define the starting point but moving forward toward a positive index.
 
-2. Positive Start + Negative Stop
-Mix forward-counting starts with backward-counting stops.
+- Example: name[-12:-8:1] (Results in "iran")
 
-Example: name[0:-5] → "hello"
+4. Start Positive, End Negative
+Starting from a forward-counting index and moving backward to a negative-counting index.
 
-name[0:-6]
+- Example: name[10:6:-1] (Results in "edac")
 
-name[1:-1]
+5. Start Negative, End Negative
+Moving strictly within the "backward-counting" zone of the string.
 
-name[5:-2]
+- Example: name[-9::-1] (Reverses "kiran")
 
-name[2:-4]
+6. Start Positive, End Positive
+Traditional slicing using standard index positions.
 
-name[4:-1]
-
-3. Negative Start + Negative Stop
-Navigate the string using only backward-counting indices (-10 to -1).
-
-Example: name[-5:-1] → "worl"
-
-name[-6:-1]
-
-name[-10:-5]
-
-name[-4:-2]
-
-name[-8:-3]
-
-name[-9:-1]
-
-4. Negative Start + Positive Stop
-- Start from the end and try to reach a forward index.
-
-- Note: Watch out for empty results if your step direction doesn't match your index direction!
-
-    - name[-2:1]
-    - name[-5:10]
-    - name[-10:5]
-    - name[-8:6]
-    - name[-1:5]
-
-5. Varying Positive Step Sizes (Forward)
-- Explore how increasing the step size "skips" characters.
-
-    - name[::1] (Step of 1)
-    - name[::2] (Step of 2 - Skip 1)
-    - name[::3] (Step of 3 - Skip 2)
-    - name[::4] (Step of 4 - Skip 3)
-    - name[::5] (Step of 5 - Skip 4)
-
-6. Varying Negative Step Sizes (Backward)
-- Reverse and skip characters using negative increments.
-
-    - name[::-1] (Standard reverse)
-    - name[::-2] (Reverse skip 1)
-    - name[::-3] (Reverse skip 2)
-    - name[::-4] (Reverse skip 3)
-    - name[::-5] (Reverse skip 4)
+- Example: name[6:13:3] (Grabs every 3rd character starting from 'a')
